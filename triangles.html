@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href= "css/styles.css" rel= "stylesheet" type="css/text">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Triangles!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Welcome to the Triangles App!</h1>
+        <h3>Where you can tri to make tryangles.</h3>
+      </div>
+
+      <form id="sides">
+        <label for="side1">Enter the length of Side 1</label>
+        <input type="text" id="side1">
+
+        <label for="side2">Enter the length of Side 2</label>
+        <input type="text" id="side2">
+
+        <label for="side3">Enter the length of Side 3</label>
+        <input type="text" id="side3">
+
+        <button type="submit" class="btn btn-warning">Find triangle type!</button>
+      </form>
+
+      <div class="result">
+        <h4>And your triangle type is:</h4>
+        <h5><span id="result"></span></h5>
+      </div>
+    </div>
+  </body>
+</html>
