@@ -1,21 +1,25 @@
+function sortNumber(a,b) {
+  return a - b;
+}
+
 var triangle = function(side1, side2, side3) {
   var sides = [];
   sides.push(side1, side2, side3);
-  sides.sort();
+  sides.sort(sortNumber);
 
-  if (sides[0] + sides[1] <= sides[2]) {
+  if ((isNaN(side1) === true) || (isNaN(side2) === true) || (isNaN(side3) === true)) {
+    return "You've gotta actually put some numbers in there, silly goose!";
+  } else if (sides[0] + sides[1] <= sides[2]) {
     return "The side lengths you gave can't form a triangle!";
-  };
-
-  if ((side1 === side2) && (side1 === side3)) {
-    return "equilateral";
-  };
-
-  if ((side1 === side2) || (side1 === side3) || (side2 === side3)) {
-    return "isosceles";
-  };
-
-  return "scalene";
+  } else if ((side1 === side2) && (side1 === side3)) {
+    return "Equilateral";
+  } else if ((side1 === side2) || (side1 === side3) || (side2 === side3)) {
+    return "Isosceles";
+  } else if ((side1 !== side2) && (side1 !== side3) && (side2 !== side3)) {
+    return "Scalene";
+  } else {
+    return "There was an unexpected error. Great job for finding it!";
+  }
 }
 
 
@@ -29,6 +33,26 @@ $(document).ready(function() {
     var result = triangle(side1, side2, side3)
 
     $("#result").text(result);
+
+    $(".equilateral").hide();
+    $(".isosceles").hide();
+    $(".scalene").hide();
+    $(".not-a-triangle").hide();
+    $(".silly-goose").hide();
+
+    if (result === "Equilateral") {
+      $(".equilateral").show();
+    } else if (result === "Isosceles") {
+      $(".isosceles").show();
+    } else if (result === "Scalene") {
+      $(".scalene").show();
+    } else if (result === "The side lengths you gave can't form a triangle!") {
+      $(".not-a-triangle").show();
+    } else {
+      $(".silly-goose").show();
+    }
+
+    $(".result").show();
 
     event.preventDefault();
   });
