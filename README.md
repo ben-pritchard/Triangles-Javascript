@@ -1,6 +1,6 @@
 ###DESCRIPTION
 
-This is an app for someone who wants to find what kind of triangle given side lengths would result in.
+This is a javascript app for someone who wants to find what kind of triangle given side lengths would result in.
 
 You will seriously be like: **"Cool."**
 

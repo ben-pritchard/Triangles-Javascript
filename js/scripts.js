@@ -19,7 +19,7 @@ var triangle = function(side1, side2, side3) {
     return "Scalene";
   } else {
     return "There was an unexpected error. Great job for finding it!";
-  }
+  };
 }
 
 
@@ -50,7 +50,7 @@ $(document).ready(function() {
       $(".not-a-triangle").show();
     } else {
       $(".silly-goose").show();
-    }
+    };
 
     $(".result").show();
 

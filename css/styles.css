@@ -1,5 +1,6 @@
 body {
   background-image: url(bg2.jpg);
+  font-family: 'Rock Salt', cursive;
 }
 
 .container, .jumbotron {
